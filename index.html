@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAIMUL</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0b0b0b;
+  padding:15px;
+  overflow:hidden;
+}
+
+/* Background Glow */
+body::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:radial-gradient(circle, rgba(255,0,0,0.25), transparent 60%);
+  filter:blur(80px);
+  z-index:0;
+}
+
+.container{
+  position:relative;
+  width:100%;
+  max-width:1100px;
+  background:#050505;
+  border-radius:20px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  padding:40px;
+  box-shadow:0 0 60px rgba(0,0,0,0.9);
+  z-index:1;
+  gap:30px;
+}
+
+/* Image */
+.image-box{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.circle{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:radial-gradient(circle, #ff0000, #900000);
+  overflow:hidden;
+  box-shadow:0 0 40px rgba(255,0,0,0.35);
+  flex-shrink:0;
+}
+
+.circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Content */
+.content{
+  flex:1;
+  color:white;
+}
+
+.content h1{
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+.content span{
+  color:#ff4d4d;
+}
+
+.content h2{
+  font-size:20px;
+  font-weight:400;
+  margin-bottom:15px;
+  color:#ff4d4d;
+}
+
+.content p{
+  font-size:14px;
+  line-height:1.6;
+  color:#888;
+  margin-bottom:20px;
+}
+
+/* Social Icons */
+.icons{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.icons a{
+  text-decoration:none;
+}
+
+.icons div{
+  width:36px;
+  height:36px;
+  border:1px solid #222;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#666;
+  cursor:pointer;
+  transition:.3s;
+  font-size:12px;
+}
+
+.icons div:hover{
+  border-color:#ff4d4d;
+  color:#ff4d4d;
+}
+
+/* Button */
+a button{
+  background:transparent;
+  border:1px solid #ff4d4d;
+  color:#ff4d4d;
+  padding:8px 18px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+a button:hover{
+  background:#ff0000;
+  color:white;
+  box-shadow:0 0 20px rgba(255,0,0,0.35);
+}
+
+/* ========================= */
+/* MOBILE SCALE FIX */
+@media(max-width:768px){
+
+  .container{
+    padding:25px;
+    gap:15px;
+  }
+
+  .circle{
+    width:140px;
+    height:140px;
+  }
+
+  .content h1{
+    font-size:18px;
+  }
+
+  .content h2{
+    font-size:13px;
+  }
+
+  .content p{
+    font-size:11px;
+  }
+
+  .icons div{
+    width:28px;
+    height:28px;
+    font-size:10px;
+  }
+
+  a button{
+    font-size:11px;
+    padding:6px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="image-box">
+    <div class="circle">
+      <!-- image -->
+      <img src="image.jpg" alt="NAIMUL">
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Hi, It's <span>NAIMUL</span></h1>
+    <h2>I'm a student of class eleven_</h2>
+
+    <p>
+      <b>My simple introduction page.</b> All my social media links are here.
+    </p>
+
+    <!-- Social Icons -->
+    <div class="icons">
+      <a href="https://t.me/naimul_z" target="_blank"><div>tg</div></a>
+      <a href="https://m.me/61587175965074" target="_blank"><div>msgr</div></a>
+      <a href="https://www.facebook.com/share/1AvBaAtzZB/" target="_blank"><div>fb</div></a>
+      <a href="https://www.tiktok.com/@invalid_user_404?_r=1&_t=ZS-93vQXwjeWjH" target="_blank"><div>ttok</div></a>
+    </div>
+
+    <!-- Email Button -->
+    <a href="mailto:sohanluck540@gmail.com?subject=hey&body=Hallo%20NAIMUL">
+      <button>Email Me</button>
+    </a>
+
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NAIMUL</title>
 
 <style>
@@ -83,21 +84,101 @@ body::before{
   margin-bottom:8px;
 }
 
-.content span{
-  color:#ff4d4d;
+/* ===================================== */
+/* SMOOTH WHITE REFLECTION */
+.reflect{
+  display:inline-block;
+
+  background:linear-gradient(
+    110deg,
+    #777 0%,
+    #777 43%,
+    #ffffff 48%,
+    #ffffff 52%,
+    #777 57%,
+    #777 100%
+  );
+
+  background-size:300% 100%;
+  background-position:150% center;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:lightReflect 5s linear infinite;
 }
+
+@keyframes lightReflect{
+
+  0%{
+    background-position:150% center;
+  }
+
+  40%{
+    background-position:-150% center;
+  }
+
+  100%{
+    background-position:-150% center;
+  }
+
+}
+
+
+/* ===================================== */
+/* SMOOTH RED REFLECTION */
+.red-reflect{
+  display:inline-block;
+
+  background:linear-gradient(
+    110deg,
+    #800000 0%,
+    #ff0000 43%,
+    #ffffff 48%,
+    #ffffff 52%,
+    #ff0000 57%,
+    #800000 100%
+  );
+
+  background-size:300% 100%;
+  background-position:150% center;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:redLightReflect 5s linear infinite;
+}
+
+@keyframes redLightReflect{
+
+  0%{
+    background-position:150% center;
+  }
+
+  40%{
+    background-position:-150% center;
+  }
+
+  100%{
+    background-position:-150% center;
+  }
+
+}
+
+
+/* ===================================== */
 
 .content h2{
   font-size:20px;
   font-weight:400;
   margin-bottom:15px;
-  color:#ff4d4d;
 }
 
 .content p{
   font-size:14px;
   line-height:1.6;
-  color:#888;
   margin-bottom:20px;
 }
 
@@ -148,8 +229,9 @@ a button:hover{
   box-shadow:0 0 20px rgba(255,0,0,0.35);
 }
 
-/* ========================= */
-/* MOBILE SCALE FIX */
+
+/* ===================================== */
+/* MOBILE */
 @media(max-width:768px){
 
   .container{
@@ -185,6 +267,7 @@ a button:hover{
     padding:6px 14px;
   }
 }
+
 </style>
 </head>
 
@@ -194,26 +277,58 @@ a button:hover{
 
   <div class="image-box">
     <div class="circle">
-      <!-- image -->
       <img src="image.jpg" alt="NAIMUL">
     </div>
   </div>
 
-  <div class="content">
-    <h1>Hi, It's <span>NAIMUL</span></h1>
-    <h2>I'm a student of class eleven,</h2>
 
+  <div class="content">
+
+    <!-- Main Title -->
+    <h1>
+      <span class="reflect">Hi, It's</span>
+      <span class="red-reflect">NAIMUL</span>
+    </h1>
+
+
+    <!-- Subtitle -->
+    <h2>
+      <span class="red-reflect">
+        I'm a student of class eleven,
+      </span>
+    </h2>
+
+
+    <!-- Description -->
     <p>
-      <b>My simple introduction page</b> All my social media links are here.
+      <span class="reflect">
+        <b>My simple introduction page.</b>
+        All my social media links are here.
+      </span>
     </p>
+
 
     <!-- Social Icons -->
     <div class="icons">
-      <a href="https://t.me/naimul_z"><div>tg</div></a>
-      <a href="hello.png"><div>ff</div></a>
-      <a href="https://www.facebook.com/share/1MP5uuZ8Ze/"><div>fb</div></a>
-      <a href="https://www.tiktok.com/@im_xuser?_r=1&_t=ZS-99Cnl0TDfRn"><div>ttok</div></a>
+
+      <a href="https://t.me/naimul_z">
+        <div>tg</div>
+      </a>
+
+      <a href="hello.png">
+        <div>ff</div>
+      </a>
+
+      <a href="https://www.facebook.com/share/1MP5uuZ8Ze/">
+        <div>fb</div>
+      </a>
+
+      <a href="https://www.tiktok.com/@im_xuser?_r=1&_t=ZS-99Cnl0TDfRn">
+        <div>ttok</div>
+      </a>
+
     </div>
+
 
     <!-- Email Button -->
     <a href="mailto:sohanluck540@gmail.com?subject=hey&body=Hallo%20NAIMUL">
